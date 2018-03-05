@@ -1,0 +1,145 @@
+/* Global */
+#app {
+}
+
+/* Home Page */
+
+.nav-links {
+	padding: 5px;
+	margin-top: -5px;
+}
+
+#sign-in-div {
+	width: 35%;
+}
+
+/* homepage */
+.homepage-sign-in-confirm {
+	color: white;
+	font-size: 15px;
+	display: inline-block;
+	float: right;
+	margin-top: -5px;
+	margin-right: 14px;
+	border-radius: 5px;
+	background-color: #8e8e8e;
+	padding: 3px;
+}
+
+/* navbar */
+.bg-faded {
+	background-color: #e61010;
+}
+
+nav i.material-icons {
+	font-size: 5vw;
+	margin-top: -3px;
+}
+
+
+nav .brand-logo {
+	font-size: 5vw;
+	padding-left: 15px;
+	padding-top: 5px;
+	margin-top: -3px;
+	text-decoration: none;
+}
+
+nav .brand-logo i.material-icons {
+	float: left;
+	margin-right: 5px;
+}
+
+.nav-links {
+	padding: 5px;
+	margin-right: 10px;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+/* SUBMIT Button */
+.btn-danger {
+	background-color: #177100;
+}
+
+.btn-danger:hover {
+	background-color: #91cd5b;
+}
+
+/* DROPDOWN */
+.center {
+	padding-right: 10px;
+	padding-left: 10px;
+	display: inline-block;
+	padding-top: 10px;
+	border-radius: 5px;
+	background-color: #6bbd52;
+	float: right;
+}
+
+.dropdown-tag {
+	font-size: 2vw;
+  color: #5c5c5c;
+	margin: 0;
+	display: inline-block;
+	border: solid 2px #5c5c5c;
+	border-radius: 5px;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.select-dropdown {
+	color: white;
+}
+
+.active {
+	color: white;
+}
+
+.select-wrapper {
+	text-align: center;
+}
+
+.dropdown-content {
+	background-color: #bababa;
+}
+
+/* UserHome page - donors Data Div */
+
+
+
+
+
+
+
+.diagram-div {
+	border: 2px solid #aee39e;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
+	margin-right: 2px;
+	margin-bottom: 5px;
+	height: 75%;
+}
+
+.diagram-title {
+	display: inline-block;
+	color: slategray;
+	font-size: 3vw;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.materialboxed {
+	width: 100%;
+	height: auto;
+}
