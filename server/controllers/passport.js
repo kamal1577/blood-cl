@@ -56,4 +56,44 @@ module.exports = function(passport) {
 	  	  });
 	   });
 	}));
+
+	passport.use('local-registerdonor', new LocalStrategy({
+		first_nameField: 'first_name',
+		last_nameField: 'last_name',
+		emailField: 'email',
+		ageField: 'age',
+		phoneField: 'phone',
+		addressField: 'address',
+		blood_groupField: 'blood_group',
+
+		passReqToCallback: true,
+	},
+	function(req, first_name, last_name, email, age, phone, address, blood_group, done) {
+		process.nextTick(function() {
+			models.Donor.findOne({ where: { first_name: first_name, last_name: last_name, blood_group: blood_group} }).then(function(donor) {
+				// if (donor) {
+				// 	return done(null, false, req.flash('registerdonorMessage', 'That username already taken'));
+				// } else {
+	  				return models.Donor.create({
+						   name: req.body.name,
+						//   first_name: req.body.first_name,
+						//   last_name: req.body.last_name,
+							first_name: first_name,
+							last_name:last_name,
+							email: email,
+							age: age,
+							phone: phone,
+							address: address,
+							blood_group: blood_group,
+
+							  
+	  				}).then(function(newDonor) {
+	  					return done(null, newDonor);
+						}).catch(function(err) {
+							console.error(err);
+						});
+				//   }
+	  	  });
+	   });
+	}));
 };

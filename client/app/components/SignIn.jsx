@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+
 class SignIn extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +26,7 @@ class SignIn extends Component {
             if(response.status == 401){
                 alert("Login Failed for Username and/or Password")
             } else {
-                this.props.history.push("/home")
+                this.props.history.push("/donateform")
             }
         });
     }
@@ -39,7 +40,7 @@ class SignIn extends Component {
         }).then((response) => response.json())
         .then((results) => {
             if(results.message === "signed-in"){
-                this.props.history.push("/home") // + results.Points
+                this.props.history.push("/home") 
             }
         });
 	}
@@ -47,28 +48,32 @@ class SignIn extends Component {
 	    return (
 	        <div>
 	       		<nav className="navbar navbar-light bg-faded">
-              <div className="nav-wrapper">
-                <a className="brand-logo"><i class="material-icons">invert_colors</i>Blood Donation<sup>&reg;</sup></a>
-                  <ul className="right hide-on-med-and-down">
-          				  <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/">Home</Link></li>
-          					<li><Link style={{textDecoration: 'none'}} className="nav-links" to="/sign-up">Sign Up</Link></li>
-                  </ul>
-              </div>
-				    </nav>
-				<div className="text-center">
-		        	<h1>Welcome to Blood Donation!</h1>
-		        	<h2>Please Sign in</h2>
-					<div className="well center-block" id="sign-in-div">
-						<form id="sign-in-form" onSubmit={this.signInForm.bind(this)}>
-							<label>Username</label><br></br>
-							<input type="text" ref="username" /><br></br>
-							<label>Password</label><br></br>
-							<input type="password" ref="password"/><br></br>
-							<input className="btn btn-danger" type="submit" />
-						</form>
-					</div>
-				</div>
-	     </div>
+                <div className="nav-wrapper">
+                    <a className="brand-logo"><i class="material-icons">invert_colors</i>Blood Donation<sup>&reg;</sup></a>
+                    <ul className="right hide-on-med-and-down">
+                            <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/">Home</Link></li>
+                                <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/sign-up">Sign Up</Link></li>
+                    </ul>
+                </div>
+                 </nav>
+                {/* <div className="img-fluid">
+                        
+                     <img src="/images/blood-donation-png.jpg" className="img-fluid" alt="Responsive image"/>      
+                </div> */}
+                <div className="text-center">
+                        <h1>Welcome to Blood Donation!</h1>
+                        <h2>Please Sign in</h2>
+                        <div className="well center-block" id="sign-in-div">
+                            <form id="sign-in-form" onSubmit={this.signInForm.bind(this)}>
+                                <label>Username</label><br></br>
+                                <input type="text" ref="username" /><br></br>
+                                <label>Password</label><br></br>
+                                <input type="password" ref="password"/><br></br>
+                                <input className="btn btn-danger" type="submit" />
+                            </form>
+                        </div>
+                </div>
+	        </div>
 	    );
   	}
 };

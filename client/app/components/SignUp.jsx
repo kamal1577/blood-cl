@@ -47,14 +47,14 @@ class SignUp extends Component {
 	    return (
 	        <div>
 	       		<nav className="navbar navbar-light bg-faded">
-              <div className="nav-wrapper">
-                <a className="brand-logo"><i class="material-icons">invert_colors</i>Blood Donation<sup>&reg;</sup></a>
-                 <ul className="right hide-on-med-and-down">
-                   <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/">Home</Link></li>
-     					     <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/login">Login</Link></li>
-                 </ul>
-              </div>
-				    </nav>
+                    <div className="nav-wrapper">
+                        <a className="brand-logo"><i class="material-icons">invert_colors</i>Blood Donation<sup>&reg;</sup></a>
+                        <ul className="right hide-on-med-and-down">
+                        <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/">Home</Link></li>
+                        <li><Link style={{textDecoration: 'none'}} className="nav-links" to="/login">Login</Link></li>
+                        </ul>
+                    </div>
+				</nav>
 				  <div className="text-center">
 		        	<h1>Welcome to Blood Donation</h1>
 		        	<h2>Not a member? Please Sign Up</h2>
@@ -75,3 +75,4 @@ class SignUp extends Component {
   	}
 };
 export default withRouter(SignUp)
+

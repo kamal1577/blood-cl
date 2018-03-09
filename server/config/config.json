@@ -1,13 +1,13 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "nycda",
     "password": null,
     "database": "blood-cl",
     "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
+    "username": "nycda",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",

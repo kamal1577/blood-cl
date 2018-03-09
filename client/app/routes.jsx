@@ -4,20 +4,32 @@ import { Switch, BrowserRouter } from "react-router-dom";
 
 
 
+
 // Children
 import Home from "./components/Home";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import UserHome from "./components/UserHome";
+import DonateForm from "./components/DonateForm";
 
 import PageNotFound from "./components/PageNotFound";
 
 export default (
-  	<Switch>
+	<Switch>
     	<Route exact path="/" component={Home} />
     	<Route path="/login" component={SignIn} />
     	<Route path="/sign-up" component={SignUp} />
     	<Route path="/home" component={UserHome} />
+		<Route path="/donateform" component={DonateForm} /> 
     	<Route path="*" component={PageNotFound} />
     </Switch>
 );
+
+
+
+
+
+
+
+
+
