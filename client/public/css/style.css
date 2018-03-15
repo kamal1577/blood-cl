@@ -1,6 +1,9 @@
 /* Global */
 #app {
 }
+h4{
+	 margin-left: 15px;
+}
 
 /* Home Page */
 
@@ -15,15 +18,15 @@
 
 /* homepage */
 .homepage-sign-in-confirm {
-	color: white;
-	font-size: 15px;
+	color:#183096;
+	font-size: 19px;
 	display: inline-block;
 	float: right;
-	margin-top: -5px;
-	margin-right: 14px;
+	margin-right: 25px;
 	border-radius: 5px;
-	background-color: #8e8e8e;
+	background-color: #13d826;
 	padding: 3px;
+	letter-spacing: 2px;
 }
 
 /* navbar */
@@ -55,8 +58,13 @@ nav .brand-logo i.material-icons {
 	margin-right: 10px;
 	font-size: 15px;
 }
+body{
+	background-color: #f7f1f1;
+}
 
-
+h8{
+	color: #9e0909;
+}
 
 
 
@@ -71,72 +79,77 @@ nav .brand-logo i.material-icons {
 	background-color: #91cd5b;
 }
 
-/* DROPDOWN */
-.center {
-	padding-right: 10px;
-	padding-left: 10px;
-	display: inline-block;
-	padding-top: 10px;
-	border-radius: 5px;
-	background-color: #6bbd52;
-	float: right;
+/*****/
+
+.slider {
+	margin-top: -19px;
 }
 
-.dropdown-tag {
-	font-size: 2vw;
-  color: #5c5c5c;
-	margin: 0;
-	display: inline-block;
-	border: solid 2px #5c5c5c;
-	border-radius: 5px;
-	background-color: white;
-	padding-left: 3px;
-	padding-right: 3px;
+.slides {
+	height: 100px;
 }
 
-.select-dropdown {
-	color: white;
-}
-
-.active {
-	color: white;
-}
-
-.select-wrapper {
-	text-align: center;
-}
-
-.dropdown-content {
-	background-color: #bababa;
-}
-
-/* UserHome page - donors Data Div */
-
-
-
-
-
-
-
-.diagram-div {
-	border: 2px solid #aee39e;
-	border-radius: 5px;
+.main-tag-h3-slideOne {
+	font-family: "Work Sans";
+	font-weight: lighter;
+	color: #074fde;
 	display: inline-block;
 	padding: 5px;
-	margin-right: 2px;
-	margin-bottom: 5px;
-	height: 75%;
+	border-radius: 5px;
+	font-size: 50px;
+	margin-top: 95px;
+	letter-spacing: 5px;
+	background-color:rgba(0,255,0,0.5)
 }
 
-.diagram-title {
-	display: inline-block;
-	color: slategray;
-	font-size: 3vw;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 0;
-  margin-bottom: 0;
+.main-tag-h5-slideTwo {
+	font-family: "Work Sans";
+	font-weight: solid;
+	color: #030008f3;
+    display: inline-block; 
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 50px;
+	margin-top: 95px;
+	letter-spacing: 5px;
+	background-color:rgba(34, 192, 192, 0.750)
 }
+.second-tag-slideTwo {
+	font-family: "Work Sans";
+	font-weight: lighter;
+	color: #074fde;
+	/* display: inline-block; */
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 50px;
+	margin-top: 95px;
+	letter-spacing: 5px;
+}
+
+.donateForm {
+	width: 500px;
+	margin: auto;
+}
+.image-container{
+	text-align:center
+}
+
+.container.custom-container {
+	padding: 0 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .materialboxed {
