@@ -1,15 +1,11 @@
 var bcrypt = require('bcryptjs');
 var cryptojs = require('crypto-js');
-var models = require('../models');
+// var models = require('../models');
 
 
 module.exports = function(sequelize, DataTypes) {
 	var Donors = sequelize.define('Donors', {
-		first_name: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
-		last_name: {
+		name: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
@@ -25,14 +21,14 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		address: {
+		zip: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		blood_group: {
 			type: DataTypes.TEXT,
 			allowNull: false,
 		},
-		// blood_group: {
-		// 	type: DataTypes.TEXT,
-		// 	allowNull: false,
-		// },
 		
 	}, {
 		classMethods: {
