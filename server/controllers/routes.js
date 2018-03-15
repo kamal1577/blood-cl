@@ -3,7 +3,7 @@ var models = require('../models');
 
 var LocalStrategy = require('passport-local').Strategy;
 var bcrypt = require('bcrypt-nodejs');
-var handler = require ('./handler.js');
+// var handler = require ('./handler.js');
 var isAuthenticated = function (req, res, next) {
 	if (req.isAuthenticated())
 	  return next();
@@ -11,7 +11,7 @@ var isAuthenticated = function (req, res, next) {
 		message: 'auth didn\'t work'
 	});
   }
-var models = require('../models');
+
 
 module.exports = (app, passport) => {
 	app.get('/', function(req, res) {
@@ -66,96 +66,49 @@ module.exports = (app, passport) => {
 			res.json({ message: 'no req.user' });
 		}
 	});
+	
 	app.get('/api/new-donor', (request, response) => {
 		console.log(request.donor);
 		if (request.donor) {
-			resuest.json({ message: 'r', donor: request.donor });
+			request.json({ message: 'new donor added', donor: request.donor });
 		} 
 	});
-	// app.post('api/new-donor', function(request, response){
-	// 			 var first_name = request.body.first_name;
-	// 			 var last_name = request.body.last_name;
-	// 			 var email = request.body.email;
-	// 			 var age = request.body.age;
-	// 			 var phone = request.body.phone;
-	// 			 var address = request.body.address;
-
-            
-                
-               
-                
-	// })
+	
 
 	app.post('/api/new-donor', function(req,res,next) {
 		console.log("Donors", typeof Donors)
 		models.Donors.create({
-				first_name: req.body.first_name,
-				last_name: req.body.last_name,
+				name: req.body.name,
 				email: req.body.email,
 				age: req.body.age,
 				phone: req.body.phone,
-				address: req.body.address,
-				// blood_group: blood_group,
+				zip: req.body.zip,
+			    blood_group: req.body.blood_group,
 			}).then(function(donor){
 				console.log(donor)
 				res.json(donor)
 			});
 		});
-		// res.json(req.body)
-		// passport.authenticate('local-newdonor', function(err, donor, info) {
-		//     if (err) {
-		//       	return next(err);
-		// 	}
-		// 	console.log(req.body);
-		// 	res.json({
-		// 		message: 'sup'
-		// 	})
-		//     // if (!donor) {
-		//     // 	return res.status(401).json({ success : false, message : 'authentication failed', info: info });
-		//     // }
-		//     // req.login(donor, function(err) {
-		// 	// 		if (err) {
-		// 	// 			return next(err);
-		// 	// 	}
-		//       	// return res.status(200).json({ success : true, message : 'authentication succeeded', object : user });
-		//   });
-	//   })(req, res, next);
-	// });
+
+		// define a route to get all donors from the db
+		
+		app.get('/api/all-donors', function(req,res,next) {
+			models.Donors.findAll({
+				order: [['zip', 'ASC']] // change to zipcode
+			}).then(donors => { 
+				console.log(donors)
+				res.json(donors);
+			})
+		});
+			
+		
+		
 
 	app.delete('/api/logout', function(req, res) {
 		req.session.destroy(function() {
 			res.status(204).send();
 		});
 	});
-
-// 	// route to create a donor for poulating DB in Postman
-	// app.post('/api/create-donor', (req, res) => {
-	// 	console.log(req.body)
-	// 	handler.createdonor(
-	// 		req.body.first_name,
-	// 		req.body.last_name,
-	// 		req.body.email,
-	// 		req.body.age,
-	// 		req.body.phone,
-	// 		req.body.address,
-	// 		req.body.blood_group,
-	// 		(donorsData) => {
-	// 			res.json(donorsData);
-	// 		}
-	// 	);
-	// });
-
-// // route to get all donors from the DB
-	// app.get('/donors', (req, res) => {
-	// 	handler.getAlldonors((donors) => {
-	// 		donors.forEach((donor) => {
-	// 			donor.first_name = donor.first_name.split(".");
-	// 			donor.last_name = donor.last_name.split(".");
-	// 			donor.blood_group = donor.blood_group.split(".");
-	// 		});
-	// 		res.json(donors);
-	// 	});
-	// });
 
 
 
