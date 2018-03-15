@@ -63,17 +63,17 @@ module.exports = function(passport) {
 		emailField: 'email',
 		ageField: 'age',
 		phoneField: 'phone',
-		addressField: 'address',
+		zipField: 'zip',
 		blood_groupField: 'blood_group',
 
 		passReqToCallback: true,
 	},
-	function(req, first_name, last_name, email, age, phone, address, blood_group, done) {
+	function(req, first_name, last_name, email, age, phone, zip, blood_group, done) {
 		process.nextTick(function() {
 			models.Donor.findOne({ where: { first_name: first_name, last_name: last_name, blood_group: blood_group} }).then(function(donor) {
-				// if (donor) {
-				// 	return done(null, false, req.flash('registerdonorMessage', 'That username already taken'));
-				// } else {
+				if (donor) {
+					return done(null, false, req.flash('registerdonorMessage', 'That username already taken'));
+				} else {
 	  				return models.Donor.create({
 						   name: req.body.name,
 						//   first_name: req.body.first_name,
@@ -83,7 +83,7 @@ module.exports = function(passport) {
 							email: email,
 							age: age,
 							phone: phone,
-							address: address,
+							zip: zip,
 							blood_group: blood_group,
 
 							  
@@ -92,7 +92,7 @@ module.exports = function(passport) {
 						}).catch(function(err) {
 							console.error(err);
 						});
-				//   }
+				  }
 	  	  });
 	   });
 	}));
