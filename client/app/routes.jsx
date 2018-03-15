@@ -11,6 +11,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import UserHome from "./components/UserHome";
 import DonateForm from "./components/DonateForm";
+import Thanks from "./components/Thanks";
 
 import PageNotFound from "./components/PageNotFound";
 
@@ -21,6 +22,7 @@ export default (
     	<Route path="/sign-up" component={SignUp} />
     	<Route path="/home" component={UserHome} />
 		<Route path="/donateform" component={DonateForm} /> 
+		<Route path="/thanks" component={Thanks}/>
     	<Route path="*" component={PageNotFound} />
     </Switch>
 );
