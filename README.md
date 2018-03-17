@@ -32,14 +32,15 @@ Front End
 How To run the App:
 In your terminal open two bashes :
    + Type webpack -w to run the app
-   + in other bash type nodemon to run the database side. 
+   + In other bash type nodemon to run the database side. 
 
  Application Features:
 
-  + Secure sign up and Login in by using passport for authentification.  Once signed up you can then login and source the data.
-  + Once on singed in you will directed to read about blood donation benefits then if you are aggree to be life saver you could click on donateform and add your info in there.
-  + Is not allaowed to submit empty form or epmty filed from the form , everything is validated .
+  + Secure sign up and Login by using passport for authentification. Once signed up you can then login and source the data.
+  + Once singed in you will be directed to read about blood donation benefits, then if you are aggreed to be a life saver you could click on donateform and add your info in there.
+  + Is not allaowed to submit empty form or epmty field from the form , everything is validated .
   
-  + Once submit registration to be a donor you will redirected to thanks page in which you could see all donors info with blood-type.
+  + Once submit registration to be a donor you will be redirected to thanks page in which you could see all donors info with blood-type.
+  + All users and donors data are saved in blood-cl database under users and donors tables .
   + Then you could Logout.
 
