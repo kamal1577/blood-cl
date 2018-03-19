@@ -1,5 +1,7 @@
 # blood-cl
+Blood Donors
 
+## Description
 Blood donations are often done by indviduals because often hospitals don't have enough blood to give to those in need , people often tend to use social networks to call for help in case of donations . I built this simple app to help solve thispart of this problem and create a one place where all people can reach each others and benefit when blood is needed.
 
 
