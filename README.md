@@ -2,7 +2,7 @@
 Blood Donors
 
 ## Description
-Blood donations are often done by indviduals because often hospitals don't have enough blood to give to those in need , people often tend to use social networks to call for help in case of donations . I built this simple app to help solve thispart of this problem and create a one place where all people can reach each others and benefit when blood is needed.
+Blood donations are often done by individuals because often hospitals don't have enough blood to give to those in need , people often tend to use social networks to call for help in case of donations . I built this simple app to help solve this part of this problem and create a one place where all people can reach each others and benefit when blood is needed.
 
 
 
@@ -17,7 +17,7 @@ Blood donations are often done by indviduals because often hospitals don't have 
 
 ## Back End :
 
- + Nodejs
+ + Node.js
  + Passport
  + PostgreSQL and (Postico)
  + Sequelize for users and donors
@@ -29,7 +29,7 @@ Blood donations are often done by indviduals because often hospitals don't have 
  + Bootstrap
  + JavaScript
  + JQuery
- + ReactJS, using webpack .
+ + React.js, using webpack .
 
 ## How To run the App:
 In your terminal open two bashes :
@@ -38,9 +38,9 @@ In your terminal open two bashes :
 
 ## Application Features:
 
-  + Secure sign up and Login by using passport for authentification. Once signed up you can then login and source the data.
-  + Once singed in you will be directed to read about blood donation benefits, then if you are aggreed to be a life saver you could click on donateform and add your info in there.
-  + Is not allaowed to submit empty form or epmty field from the form , everything is validated .
+  + Secure sign up and Login by using passport for authentication. Once signed up you can then login and source the data.
+  + Once singed in you will be directed to read about blood donation benefits, then if you are agreed to be a life saver you could click on donate form and add your info in there.
+  + Is not allowed to submit empty form or empty field from the form , everything is validated .
 
   + Once submit registration to be a donor you will be redirected to thanks page in which you could see all donors info with blood-type.
   + All users and donors data are saved in blood-cl database under users and donors tables .
