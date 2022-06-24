@@ -18,7 +18,7 @@
     "cryptojs": "^2.5.3",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
