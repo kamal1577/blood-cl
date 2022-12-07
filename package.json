@@ -16,7 +16,7 @@
     "cookie-parser": "^1.4.3",
     "crypto-js": "^3.1.9-1",
     "cryptojs": "^2.5.3",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.4",
